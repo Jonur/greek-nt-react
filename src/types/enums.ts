@@ -8,3 +8,7 @@ export enum NationalTeam {
   MENS = 'MENS',
   WOMENS = 'WOMENS',
 }
+
+export enum Locale {
+  EN_GB = 'en-GB',
+}

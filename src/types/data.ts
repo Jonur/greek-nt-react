@@ -18,6 +18,8 @@ export type Tournament = {
 
 export type TeamEvent = {
   id: number;
+  customId: string;
+  slug: string;
   startTimestamp: number;
   status: {
     code: number;

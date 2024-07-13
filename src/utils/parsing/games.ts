@@ -16,6 +16,8 @@ const getTournamentName = (tournament: ApiTournament) =>
 const games = (data: ApiTeamData): TeamEvent[] =>
   data.events.map((event) => ({
     id: event.id,
+    customId: event.customId,
+    slug: event.slug,
     startTimestamp: event.startTimestamp,
     status: event.status,
     tournament: {
