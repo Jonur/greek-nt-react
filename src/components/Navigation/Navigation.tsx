@@ -1,11 +1,12 @@
 import c from 'classnames';
 
 import { SPORT_ICON_MAP, TRANSLATIONS } from 'src/constants';
-import { useViewCtx } from 'src/hooks';
-import { NationalTeam, Sport } from 'src/types';
+import { useDataCtx, useViewCtx } from 'src/hooks';
+import { FetchingStatus, NationalTeam, Sport } from 'src/types';
 
 const Navigation: React.FC = () => {
   const { sport, setSport, nationalTeam, setNationalTeam } = useViewCtx();
+  const { status } = useDataCtx();
 
   return (
     <nav className="px-4 mt-6 flex flex-col gap-y-6">
@@ -13,6 +14,7 @@ const Navigation: React.FC = () => {
         {Object.values(Sport).map((s) => (
           <li key={s} role="menuitem" className="h-[44px]">
             <button
+              disabled={status === FetchingStatus.LOADING}
               onClick={() => setSport(s)}
               className={c(
                 'flex gap-x-1 items-center justify-center w-full py-2 mt-0.5 transition-colors duration-300',
@@ -32,6 +34,7 @@ const Navigation: React.FC = () => {
         {Object.values(NationalTeam).map((team) => (
           <li key={team} role="tab">
             <button
+              disabled={status === FetchingStatus.LOADING}
               onClick={() => setNationalTeam(team)}
               className={c(
                 'flex gap-x-1 items-center justify-center w-full transition-colors duration-300 border-b-2 h-[30px]',

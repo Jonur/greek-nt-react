@@ -12,3 +12,9 @@ export enum NationalTeam {
 export enum Locale {
   EN_GB = 'en-GB',
 }
+
+export enum FetchingStatus {
+  LOADING = 'LOADING',
+  SUCCESS = 'SUCCESS',
+  FAILURE = 'FAILURE',
+}
