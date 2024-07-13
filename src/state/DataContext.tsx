@@ -20,6 +20,7 @@ export const DataProvider: React.FC<React.PropsWithChildren> = ({ children }) =>
 
     const fetchData = (page = 0) => {
       setStatus(FetchingStatus.LOADING);
+      setTeamEvents([]);
 
       axios
         .get(`https://www.sofascore.com/api/v1/team/${teamId}/events/next/${page}`)
