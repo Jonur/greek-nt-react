@@ -1,4 +1,4 @@
-import { ApiTeamData } from './api';
+import { TeamEvent } from './data';
 import { FetchingStatus, NationalTeam, Sport } from './enums';
 
 export type ViewContext = {
@@ -9,6 +9,6 @@ export type ViewContext = {
 };
 
 export type DataContext = {
-  gameData: ApiTeamData | null;
+  teamEvents: TeamEvent[];
   status: FetchingStatus;
 };

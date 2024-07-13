@@ -6,10 +6,9 @@ import Navigation from 'src/components/Navigation';
 import SkeletonLoader from 'src/components/SkeletonLoader';
 import { useDataCtx } from 'src/hooks';
 import { FetchingStatus } from 'src/types';
-import { games } from 'src/utils';
 
 const App: React.FC = () => {
-  const { status, gameData } = useDataCtx();
+  const { status, teamEvents } = useDataCtx();
 
   return (
     <>
@@ -21,9 +20,9 @@ const App: React.FC = () => {
 
       {status === FetchingStatus.FAILURE && <div>Something went wrong!</div>}
 
-      {status === FetchingStatus.SUCCESS && gameData !== null && (
+      {status === FetchingStatus.SUCCESS && Boolean(teamEvents.length) && (
         <div role="tree" className="px-4 pt-4 pb-6 flex flex-col gap-y-3">
-          {games(gameData).map((game) => (
+          {teamEvents.map((game) => (
             <GameCard key={game.id} game={game} />
           ))}
         </div>
