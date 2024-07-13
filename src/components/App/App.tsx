@@ -1,31 +1,20 @@
 import React from 'react';
 
 import basketballGameData from 'src/__fixtures__/data/team.json';
+import Header from 'src/components/Header';
+import Navigation from 'src/components/Navigation';
+import { ApiTeamData } from 'src/types';
 import { games } from 'src/utils';
 
 const App: React.FC = () => {
   return (
     <>
-      <header className="w-full h-[60px] flex py-4 px-4 gap-x-2 items-center bg-white text-blue-900 border-b-2 border-blue-900">
-        <img className="h-full w-auto" src="img/crest.png" />
-        <h1 className="text-2xl">Greece national teams games</h1>
-      </header>
-      <header className="px-4 py-2 text-blue-900 flex gap-x-2">
-        <img src="img/basketball.svg" className="h-6 w-auto" />
-        <h2>Men&apos;s Basketball</h2>
-      </header>
-      <div className="h-[2px] w-full bg-blue-900 mb-[2px]" />
-      <div className="h-[2px] w-full bg-blue-900 mb-[2px]" />
-      <div className="h-[2px] w-full bg-blue-900 mb-[2px]" />
-      <div className="h-[2px] w-full bg-blue-900 mb-[2px]" />
-      <div className="h-[2px] w-full bg-blue-900 mb-[2px]" />
-      <div className="h-[2px] w-full bg-blue-900 mb-[2px]" />
-      <div className="h-[2px] w-full bg-blue-900 mb-[2px]" />
-      <div className="h-[2px] w-full bg-blue-900 mb-[2px]" />
-      <div className="h-[2px] w-full bg-blue-900 mb-[2px]" />
+      <Header />
+
+      <Navigation />
 
       <div className="px-4 pt-4 pb-6">
-        {games(basketballGameData).map((game) => {
+        {games(basketballGameData as ApiTeamData).map((game) => {
           const gameDate = new Date(game.startTimestamp * 1000);
           const formattedGameDate = new Intl.DateTimeFormat('en-GB', {
             year: 'numeric',
@@ -45,7 +34,9 @@ const App: React.FC = () => {
                   className="h-6 w-auto"
                   src={`https://api.sofascore.app/api/v1/unique-tournament/${game.tournament.uniqueTournamentId}/image/dark`}
                 />
-                <span className="text-sm">{game.tournament.name}</span>
+                <span className="text-sm">
+                  {game.tournament.name} &ndash; {game.tournament.groupName}
+                </span>
               </h3>
               <div className="flex gap-x-2 justify-center py-4">
                 <div className="flex gap-x-2">

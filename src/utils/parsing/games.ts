@@ -1,7 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import { Team, TeamGames } from 'src/types';
+import { ApiTeam, ApiTeamData, ApiTournament, Team, TeamEvent } from 'src/types';
 
-const getTeamData = (team: any): Team => ({
+const getTeamData = (team: ApiTeam): Team => ({
   id: team.id,
   name: team.name,
   teamColors: {
@@ -11,15 +10,18 @@ const getTeamData = (team: any): Team => ({
   },
 });
 
-const games = (data: any): TeamGames['events'] =>
-  data.events.map((event: any) => ({
+const getTournamentName = (tournament: ApiTournament) =>
+  tournament.isGroup ? tournament.uniqueTournament.name : tournament.name;
+
+const games = (data: ApiTeamData): TeamEvent[] =>
+  data.events.map((event) => ({
     id: event.id,
     startTimestamp: event.startTimestamp,
     status: event.status,
     tournament: {
       id: event.tournament.id,
-      uniqueTournamentId: event.tournament.uniqueTournament?.id || 0,
-      name: event.tournament.name,
+      uniqueTournamentId: event.tournament.uniqueTournament.id,
+      name: getTournamentName(event.tournament),
       groupName: event.tournament.groupName,
       category: {
         id: event.tournament.category.id,

@@ -9,3 +9,10 @@ https://www.sofascore.com/tournament/basketball/international/olympic-games/276
 
 Tournament image example
 https://api.sofascore.app/api/v1/unique-tournament/276/image/dark
+
+IDs:
+Mens Basketball: 6128
+Womens basketball: 35343
+
+Mens Football: 4710
+Womens football: 35316
