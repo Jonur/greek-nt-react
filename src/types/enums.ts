@@ -1,10 +1,10 @@
 export enum Sport {
-  BASKETBALL = 'basketball',
-  FOOTBALL = 'football',
-  WATER_POLO = 'water_polo',
+  BASKETBALL = 'BASKETBALL',
+  FOOTBALL = 'FOOTBALL',
+  WATER_POLO = 'WATER_POLO',
 }
 
 export enum NationalTeam {
-  MENS = 'mens',
-  WOMENS = 'womens',
+  MENS = 'MENS',
+  WOMENS = 'WOMENS',
 }
