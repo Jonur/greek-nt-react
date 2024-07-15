@@ -545,6 +545,42 @@ video {
   --tw-contain-style:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.right-4 {
+  right: 1rem;
+}
+
+.top-4 {
+  top: 1rem;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.top-1 {
+  top: 0.25rem;
+}
+
+.right-5 {
+  right: 1.25rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -560,6 +596,26 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -590,6 +646,22 @@ video {
   height: 72px;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-\[40px\] {
+  height: 40px;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
 .w-3 {
   width: 0.75rem;
 }
@@ -618,12 +690,44 @@ video {
   width: 100%;
 }
 
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.min-w-\[50px\] {
+  min-width: 50px;
+}
+
+.min-w-\[60px\] {
+  min-width: 60px;
+}
+
 .max-w-\[112px\] {
   max-width: 112px;
 }
 
 .max-w-\[800px\] {
   max-width: 800px;
+}
+
+.max-w-\[calc\(50\%-44px\)\] {
+  max-width: calc(50% - 44px);
+}
+
+.max-w-\[50\%\] {
+  max-width: 50%;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.basis-16 {
+  flex-basis: 4rem;
 }
 
 @keyframes pulse {
@@ -648,8 +752,16 @@ video {
   flex-direction: column;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -688,6 +800,14 @@ video {
   row-gap: 1.5rem;
 }
 
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
+
+.gap-y-8 {
+  row-gap: 2rem;
+}
+
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -702,6 +822,14 @@ video {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .border-b {
@@ -734,6 +862,15 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-blue-10 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 241 250 / var(--tw-bg-opacity));
+}
+
+.bg-primary {
+  background-color: var(--primary, #14448C);
 }
 
 .p-4 {
@@ -775,6 +912,16 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -811,6 +958,50 @@ video {
   padding-top: 1.5rem;
 }
 
+.pt-20 {
+  padding-top: 5rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.pl-1 {
+  padding-left: 0.25rem;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
+}
+
+.pt-14 {
+  padding-top: 3.5rem;
+}
+
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -826,6 +1017,31 @@ video {
   line-height: 1rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -838,12 +1054,45 @@ video {
   font-weight: 600;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .leading-\[18px\] {
   line-height: 18px;
 }
 
+.leading-3 {
+  line-height: .75rem;
+}
+
+.leading-4 {
+  line-height: 1rem;
+}
+
+.leading-5 {
+  line-height: 1.25rem;
+}
+
+.leading-none {
+  line-height: 1;
+}
+
+.text-primary {
+  color: var(--primary, #14448C);
+}
+
+.text-blue-10 {
+  --tw-text-opacity: 1;
+  color: rgb(235 241 250 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition-colors {

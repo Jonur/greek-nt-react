@@ -33,15 +33,15 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
       </header>
 
       <main className="flex gap-x-3 items-center pt-6 pb-4 border-b border-blue-20">
-        <div className="flex gap-x-2 font-medium items-center">
-          <img className="h-6 w-auto" src={getTeamImage(game.homeTeam)} />
+        <div className="flex gap-x-2 font-medium items-center flex-0 max-w-[50%]">
+          <img className="h-6 w-auto" src={getTeamImage(game.homeTeam.id)} />
           <TeamDisplay team={game.homeTeam} />
         </div>
 
         <span>vs</span>
 
-        <div className="flex gap-x-2 font-medium items-center">
-          <img className="h-6 w-auto" src={getTeamImage(game.awayTeam)} />
+        <div className="flex gap-x-2 font-medium items-center flex-1 max-w-[50%]">
+          <img className="h-6 w-auto" src={getTeamImage(game.awayTeam.id)} />
           <TeamDisplay team={game.awayTeam} />
         </div>
       </main>

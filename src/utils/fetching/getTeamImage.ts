@@ -1,5 +1,3 @@
-import { Team } from 'src/types';
-
-const getTeamImage = (team: Team) => `https://api.sofascore.app/api/v1/team/${team.id}/image`;
+const getTeamImage = (id: number) => `https://api.sofascore.app/api/v1/team/${id}/image`;
 
 export default getTeamImage;

@@ -4,20 +4,20 @@ import React, { createContext, useEffect, useState } from 'react';
 import { FETCHING_DELAY_EFFECT_MS, GAME_STATUS_CODES, TEAM_IDS } from 'src/constants';
 import { useViewCtx } from 'src/hooks';
 import { ApiTeamData, DataContext, FetchingStatus, GameStatus, TeamEvent } from 'src/types';
-import { games, getTeamEvents } from 'src/utils';
+import { games, getTeamEvents, getUserClubOptions } from 'src/utils';
 
 // eslint-disable-next-line no-type-assertion/no-type-assertion
 export const DataCtx = createContext<DataContext>({} as DataContext);
 
 export const DataProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
-  const { sport, nationalTeam } = useViewCtx();
+  const { sport, nationalTeam, privateClubs } = useViewCtx();
 
   const [status, setStatus] = useState<FetchingStatus>(FetchingStatus.LOADING);
   const [teamEvents, setTeamEvents] = useState<TeamEvent[]>([]);
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    const teamIds = TEAM_IDS[`${sport}-${nationalTeam}`];
+    const teamIds = [...TEAM_IDS[`${sport}-${nationalTeam}`], ...getUserClubOptions()[sport]];
     let timeout: NodeJS.Timeout;
 
     const fetchData = (page = 0) => {
@@ -63,7 +63,7 @@ export const DataProvider: React.FC<React.PropsWithChildren> = ({ children }) =>
     return () => {
       clearTimeout(timeout);
     };
-  }, [nationalTeam, sport]);
+  }, [nationalTeam, sport, privateClubs]);
 
   return <DataCtx.Provider value={{ teamEvents, status }}>{children}</DataCtx.Provider>;
 };

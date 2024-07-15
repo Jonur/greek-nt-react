@@ -5,17 +5,21 @@ import Header from 'src/components/Header';
 import Navigation from 'src/components/Navigation';
 import SkeletonLoader from 'src/components/SkeletonLoader';
 import { TRANSLATIONS } from 'src/constants';
-import { useDataCtx } from 'src/hooks';
+import { useDataCtx, useViewCtx } from 'src/hooks';
 import { FetchingStatus } from 'src/types';
 
 import Footer from './Footer';
+import UserOptions from './UserOptions';
 
 const App: React.FC = () => {
+  const { menuOpen } = useViewCtx();
   const { status, teamEvents } = useDataCtx();
 
   return (
     <div className="max-w-[800px] flex flex-col mx-auto">
       <Header />
+
+      {menuOpen && <UserOptions />}
 
       <Navigation />
 

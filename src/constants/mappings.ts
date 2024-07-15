@@ -1,7 +1,11 @@
 import { NationalTeam, Sport } from 'src/types';
 
 import {
+  AEK_BC,
+  AEK_FC,
   ALEXANDROS_SKORILAS,
+  ARIS_BC,
+  ARIS_FC,
   ARISTOTELIS_THANOS,
   CHRISTOS_ANTONOPOULOS,
   CHRISTOS_GLAVAS,
@@ -26,6 +30,12 @@ import {
   MARTHA_MATOULA,
   MICHAELA_LAKI,
   MICHALIS_SAKELLARIDIS,
+  OLYMPIACOS_BC,
+  OLYMPIACOS_FC,
+  PANATHINAIKOS_BC,
+  PANATHINAIKOS_FC,
+  PAOK_BC,
+  PAOK_FC,
   PAVLOS_TSITSIPAS,
   PETROS_TSITSIPAS,
   SAPFO_SAKELLARIDI,
@@ -79,4 +89,9 @@ export const TEAM_IDS: Record<string, number[]> = {
     DIMITRA_PAVLOU,
     ELENI_CHRISTOFI,
   ],
+};
+
+export const PRIVATE_CLUBS_IDS: Record<string, number[]> = {
+  [`${Sport.BASKETBALL}-${NationalTeam.MEN}`]: [OLYMPIACOS_BC, PANATHINAIKOS_BC, AEK_BC, ARIS_BC, PAOK_BC],
+  [`${Sport.FOOTBALL}-${NationalTeam.MEN}`]: [OLYMPIACOS_FC, PANATHINAIKOS_FC, AEK_FC, ARIS_FC, PAOK_FC],
 };
