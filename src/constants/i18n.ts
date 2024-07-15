@@ -8,7 +8,7 @@ export const TRANSLATIONS: Record<string, string> = {
   [NationalTeam.MEN]: 'Men’s',
   [NationalTeam.WOMEN]: 'Women’s',
   error: 'It seems like there are no scheduled events for this category.',
-  userOptionsInfo: 'You can select your favourite clubs from the menu to keep up with their schedule.',
+  userOptionsInfo: 'Select your favourite clubs to view their schedule.',
   3501: 'Olympiacos',
   3508: 'Panathinaikos',
   3502: 'AEK',
