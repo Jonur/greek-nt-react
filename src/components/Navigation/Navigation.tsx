@@ -19,7 +19,7 @@ const Navigation: React.FC = () => {
               className={c(
                 'flex flex-col gap-y-1 items-center justify-center w-full py-2.5 mt-0.5 transition-colors duration-300 rounded-lg',
                 {
-                  'bg-white rounded-lg font-semibold': sport === s,
+                  'bg-white rounded-lg font-medium': sport === s,
                 }
               )}
             >
@@ -39,7 +39,7 @@ const Navigation: React.FC = () => {
               className={c(
                 'flex gap-x-1 items-center justify-center w-full transition-colors duration-300 border-b-2 h-[30px]',
                 {
-                  'border-primary font-semibold': nationalTeam === team,
+                  'border-primary font-medium': nationalTeam === team,
                   'border-blue-10': nationalTeam !== team,
                 }
               )}

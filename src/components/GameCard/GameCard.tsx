@@ -49,10 +49,10 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
       <footer className="py-2 font-normal flex items-center justify-between">
         <div className="flex items-center pt-0.5 gap-x-3">
           <span>
-            <span className="font-semibold">Date:</span> {date}
+            <span className="font-medium">Date:</span> {date}
           </span>
           <span>
-            <span className="font-semibold">Time:</span> {time} BST
+            <span className="font-medium">Time:</span> {time} BST
           </span>
         </div>
 
