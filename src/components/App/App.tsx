@@ -9,7 +9,7 @@ import { useDataCtx, useViewCtx } from 'src/hooks';
 import { FetchingStatus } from 'src/types';
 
 import Footer from './Footer';
-import UserOptions from './UserOptions';
+import Settings from './Settings';
 
 const App: React.FC = () => {
   const { menuOpen } = useViewCtx();
@@ -19,7 +19,7 @@ const App: React.FC = () => {
     <div className="max-w-[800px] flex flex-col mx-auto">
       <Header />
 
-      {menuOpen && <UserOptions />}
+      {menuOpen && <Settings />}
 
       <Navigation />
 
