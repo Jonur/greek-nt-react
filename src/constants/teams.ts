@@ -37,11 +37,18 @@ export const GNT_FOOTBALL_WOMEN = 35316;
 export const GNT_WATER_POLO_WOMEN = 24481;
 
 // Major Greek teams - Basketball
-export const OLYMPIACOS_BC = 3501;
 export const PANATHINAIKOS_BC = 3508;
-export const AEK_BC = 3502;
+export const OLYMPIACOS_BC = 3501;
+export const PERISTERI_BC = 3503;
+export const PROMITHEAS_PATRAS = 232667;
 export const ARIS_BC = 3505;
+export const KOLOSSOS_RODOU = 5618;
+export const AEK_ATHENS_BC = 3502;
+export const GS_LAVRIO = 207495;
 export const PAOK_BC = 3509;
+export const MAROUSSI_BC = 266541;
+export const AS_KARDITSAS = 266539;
+export const APOLLON_PATRAS_BC = 5620;
 
 // Major Greek teams - Football
 export const OLYMPIACOS_FC = 3245;

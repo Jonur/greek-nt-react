@@ -35,7 +35,7 @@ const UserOptions: React.FC = () => {
   };
 
   return (
-    <nav className="absolute max-w-[800px] mx-auto top-0 right-0 lg:right-auto bg-blue-10 shadow-lg p-4 pt-8 w-full h-full flex flex-col">
+    <nav className="absolute max-w-[800px] mx-auto top-0 right-0 lg:right-auto bg-blue-10 shadow-lg p-4 pt-8 w-full h-full flex flex-col overflow-y-scroll">
       <h1 className="font-medium">{TRANSLATIONS['settings.title']}</h1>
       <h2>{TRANSLATIONS['settings.description']}</h2>
 
@@ -98,7 +98,7 @@ const UserOptions: React.FC = () => {
           </ul>
         </section>
 
-        <div className="flex gap-x-2 w-full justify-end absolute bottom-6 right-4">
+        <div className="flex gap-x-2 w-full justify-end">
           <button
             onClick={() => setMenuOpen(false)}
             className="text-primary px-4 h-[40px] leading-none flex items-center mt-4 pb-0.5"

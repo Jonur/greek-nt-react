@@ -788,6 +788,10 @@ video {
   row-gap: 2rem;
 }
 
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
 .whitespace-nowrap {
   white-space: nowrap;
 }
