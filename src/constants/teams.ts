@@ -28,10 +28,24 @@ export const MICHAELA_LAKI = 340445;
 export const DIMITRA_PAVLOU = 317520;
 export const ELENI_CHRISTOFI = 97031;
 
-// Major Greek National Teams
+// Greek National teams
 export const GNT_BASKETBALL_MEN = 6128;
 export const GNT_FOOTBALL_MEN = 4710;
 export const GNT_WATER_POLO_MEN = 24492;
 export const GNT_BASKETBALL_WOMEN = 35343;
 export const GNT_FOOTBALL_WOMEN = 35316;
 export const GNT_WATER_POLO_WOMEN = 24481;
+
+// Major Greek teams - Basketball
+export const OLYMPIACOS_BC = 3501;
+export const PANATHINAIKOS_BC = 3508;
+export const AEK_BC = 3502;
+export const ARIS_BC = 3505;
+export const PAOK_BC = 3509;
+
+// Major Greek teams - Football
+export const OLYMPIACOS_FC = 3245;
+export const PANATHINAIKOS_FC = 3248;
+export const AEK_FC = 3250;
+export const ARIS_FC = 3252;
+export const PAOK_FC = 3251;
