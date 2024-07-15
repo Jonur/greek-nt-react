@@ -9,7 +9,7 @@ const Navigation: React.FC = () => {
   const { status } = useDataCtx();
 
   return (
-    <nav className="px-4 mt-6 flex flex-col gap-y-6">
+    <nav className="px-4 mt-4 lg:mt-6 flex flex-col gap-y-6">
       <ul role="menubar" className="w-full bg-blue-20 rounded-lg grid grid-cols-4 gap-x-2 px-0.5 text-sm">
         {Object.values(Sport).map((s) => (
           <li key={s} role="menuitem" className="h-[72px]">
@@ -17,7 +17,7 @@ const Navigation: React.FC = () => {
               disabled={status === FetchingStatus.LOADING}
               onClick={() => setSport(s)}
               className={c(
-                'flex flex-col gap-y-1 items-center justify-center w-full py-2.5 mt-0.5 transition-colors duration-300',
+                'flex flex-col gap-y-1 items-center justify-center w-full py-2.5 mt-0.5 transition-colors duration-300 rounded-lg',
                 {
                   'bg-white rounded-lg font-semibold': sport === s,
                 }

@@ -566,6 +566,18 @@ video {
   margin-top: 60px;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .flex {
   display: flex;
 }
@@ -916,6 +928,10 @@ body {
 @media (min-width: 1024px) {
   body {
     font-size: 18px;
+  }
+
+  .lg\:mt-6 {
+    margin-top: 1.5rem;
   }
 
   .lg\:items-end {
