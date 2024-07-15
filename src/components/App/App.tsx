@@ -8,6 +8,8 @@ import { TRANSLATIONS } from 'src/constants';
 import { useDataCtx } from 'src/hooks';
 import { FetchingStatus } from 'src/types';
 
+import Footer from './Footer';
+
 const App: React.FC = () => {
   const { status, teamEvents } = useDataCtx();
 
@@ -28,6 +30,8 @@ const App: React.FC = () => {
           ))}
         </main>
       )}
+
+      <Footer />
     </div>
   );
 };
