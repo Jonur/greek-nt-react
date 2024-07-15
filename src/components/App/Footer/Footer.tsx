@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { TRANSLATIONS } from 'src/constants';
+
 const Footer: React.FC = () => {
   const thisYear = new Date().getFullYear();
 
@@ -11,10 +13,10 @@ const Footer: React.FC = () => {
         rel="noopener noreferrer"
         target="_blank"
         href="https://github.com/Jonur"
-        aria-label="Jonur on Github"
+        aria-label={TRANSLATIONS['footer.ariaLabel']}
         className="underline"
       >
-        Jonur
+        {TRANSLATIONS['footer.title']}
       </a>
     </footer>
   );

@@ -36,14 +36,14 @@ const UserOptions: React.FC = () => {
 
   return (
     <nav className="absolute max-w-[800px] mx-auto top-0 right-0 lg:right-auto bg-blue-10 shadow-lg p-4 pt-8 w-full h-full flex flex-col">
-      <h1 className="font-medium">Settings</h1>
-      <h2>{TRANSLATIONS.userOptionsInfo}</h2>
+      <h1 className="font-medium">{TRANSLATIONS['settings.title']}</h1>
+      <h2>{TRANSLATIONS['settings.description']}</h2>
 
       <form className="mt-[40px] flex flex-col flex-1 gap-y-8 items-start" onSubmit={handleSubmit}>
         <section className="w-full">
           <h3 className="flex gap-x-1 text-base items-center font-medium">
             <img src={`img/basketball.svg`} className="w-6 h-6" />
-            <span>Basketball</span>
+            <span>{TRANSLATIONS[Sport.BASKETBALL]}</span>
           </h3>
 
           <ul className="mt-3 flex flex-col gap-y-2 bg-white rounded-lg w-full p-4">
@@ -72,7 +72,7 @@ const UserOptions: React.FC = () => {
         <section className="w-full">
           <h3 className="flex gap-x-1 text-base items-center font-medium">
             <img src={`img/football.svg`} className="w-6 h-6" />
-            <span>Football</span>
+            <span>{TRANSLATIONS[Sport.FOOTBALL]}</span>
           </h3>
 
           <ul className="mt-3 flex flex-col gap-y-2 bg-white rounded-lg w-full p-4">
@@ -103,11 +103,11 @@ const UserOptions: React.FC = () => {
             onClick={() => setMenuOpen(false)}
             className="text-primary px-4 h-[40px] leading-none flex items-center mt-4 pb-0.5"
           >
-            Cancel
+            {TRANSLATIONS['cta.cancel']}
           </button>
 
           <button className="bg-primary text-blue-10 px-4 rounded-lg h-[40px] leading-none flex items-center mt-4 pb-0.5">
-            Update preferences
+            {TRANSLATIONS['cta.updatePreferences']}
           </button>
         </div>
       </form>
