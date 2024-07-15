@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, { createContext, useEffect, useState } from 'react';
 
-import { TEAM_SOFASCORE_IDS } from 'src/constants';
+import { FETCHING_DELAY_EFFECT_MS, TEAM_IDS } from 'src/constants';
 import { useViewCtx } from 'src/hooks';
 import { ApiTeamData, DataContext, FetchingStatus, TeamEvent } from 'src/types';
-import { games } from 'src/utils';
+import { games, getTeamEvents } from 'src/utils';
 
 // eslint-disable-next-line no-type-assertion/no-type-assertion
 export const DataCtx = createContext<DataContext>({} as DataContext);
@@ -16,33 +16,41 @@ export const DataProvider: React.FC<React.PropsWithChildren> = ({ children }) =>
   const [teamEvents, setTeamEvents] = useState<TeamEvent[]>([]);
 
   useEffect(() => {
-    const teamId = TEAM_SOFASCORE_IDS[`${sport}-${nationalTeam}`];
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    const teamId = TEAM_IDS[`${sport}-${nationalTeam}`];
+    let timeout: NodeJS.Timeout;
 
     const fetchData = (page = 0) => {
       setStatus(FetchingStatus.LOADING);
       setTeamEvents([]);
 
-      axios
-        .get(`https://www.sofascore.com/api/v1/team/${teamId}/events/next/${page}`)
-        .then((response) => {
-          const newData: ApiTeamData = response.data;
-          const hasNextPage = newData.hasNextPage;
+      timeout = setTimeout(() => {
+        axios
+          .get(getTeamEvents(teamId, page))
+          .then((response) => {
+            const newData: ApiTeamData = response.data;
+            const hasNextPage = newData.hasNextPage;
 
-          setTeamEvents((prevEvents) => [...prevEvents, ...games(newData)]);
+            setTeamEvents((prevEvents) => [...prevEvents, ...games(newData)]);
 
-          if (hasNextPage) {
-            void fetchData(page + 1);
-          }
-        })
-        .catch(() => {
-          setStatus(FetchingStatus.FAILURE);
-        })
-        .finally(() => {
-          setStatus(FetchingStatus.SUCCESS);
-        });
+            if (hasNextPage) {
+              void fetchData(page + 1);
+            }
+          })
+          .catch(() => {
+            setStatus(FetchingStatus.FAILURE);
+          })
+          .finally(() => {
+            setStatus(FetchingStatus.SUCCESS);
+          });
+      }, FETCHING_DELAY_EFFECT_MS);
     };
 
     void fetchData();
+
+    return () => {
+      clearTimeout(timeout);
+    };
   }, [nationalTeam, sport]);
 
   return <DataCtx.Provider value={{ teamEvents, status }}>{children}</DataCtx.Provider>;

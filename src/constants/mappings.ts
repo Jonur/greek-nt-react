@@ -6,7 +6,7 @@ export const SPORT_ICON_MAP: Record<Sport, string> = {
   [Sport.WATER_POLO]: 'polo',
 };
 
-export const TEAM_SOFASCORE_IDS: Record<string, number> = {
+export const TEAM_IDS: Record<string, number> = {
   [`${Sport.BASKETBALL}-${NationalTeam.MENS}`]: 6128,
   [`${Sport.FOOTBALL}-${NationalTeam.MENS}`]: 4710,
   [`${Sport.WATER_POLO}-${NationalTeam.MENS}`]: 24492,
