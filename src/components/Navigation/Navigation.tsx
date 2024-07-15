@@ -10,14 +10,14 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className="px-4 mt-6 flex flex-col gap-y-6">
-      <ul role="menubar" className="w-full bg-blue-20 rounded-lg grid grid-cols-3 gap-x-2 px-0.5 text-sm">
+      <ul role="menubar" className="w-full bg-blue-20 rounded-lg grid grid-cols-4 gap-x-2 px-0.5 text-sm">
         {Object.values(Sport).map((s) => (
-          <li key={s} role="menuitem" className="h-[48px]">
+          <li key={s} role="menuitem" className="h-[72px]">
             <button
               disabled={status === FetchingStatus.LOADING}
               onClick={() => setSport(s)}
               className={c(
-                'flex gap-x-1 items-center justify-center w-full py-2.5 mt-0.5 transition-colors duration-300',
+                'flex flex-col gap-y-1 items-center justify-center w-full py-2.5 mt-0.5 transition-colors duration-300',
                 {
                   'bg-white rounded-lg font-semibold': sport === s,
                 }

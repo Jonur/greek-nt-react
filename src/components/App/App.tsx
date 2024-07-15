@@ -11,6 +11,8 @@ import { FetchingStatus } from 'src/types';
 const App: React.FC = () => {
   const { status, teamEvents } = useDataCtx();
 
+  console.info(teamEvents);
+
   return (
     <>
       <Header />
