@@ -5,7 +5,7 @@ export const TRANSLATIONS: Record<string, string> = {
   [Sport.FOOTBALL]: 'Football',
   [Sport.WATER_POLO]: 'Water polo',
   [Sport.TENNIS]: 'Tennis',
-  [NationalTeam.MENS]: 'Men’s',
-  [NationalTeam.WOMENS]: 'Women’s',
+  [NationalTeam.MEN]: 'Men’s',
+  [NationalTeam.WOMEN]: 'Women’s',
   error: 'It seems like there are no scheduled events for this category.',
 };

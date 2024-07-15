@@ -9,7 +9,7 @@ export const ViewCtx = createContext<ViewContext>({} as ViewContext);
 export const ViewProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [sport, setSport] = useState<Sport>(getLSItem<Sport>('sport') || Sport.BASKETBALL);
   const [nationalTeam, setNationalTeam] = useState<NationalTeam>(
-    getLSItem<NationalTeam>('nationalTeam') || NationalTeam.MENS
+    getLSItem<NationalTeam>('nationalTeam') || NationalTeam.MEN
   );
 
   useEffect(() => {

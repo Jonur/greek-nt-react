@@ -12,6 +12,12 @@ import {
   ELENI_CHRISTOFI,
   GEORGIOS_NOUCHAKIS,
   GEORGIOS_VALARIS,
+  GNT_BASKETBALL_MEN,
+  GNT_BASKETBALL_WOMEN,
+  GNT_FOOTBALL_MEN,
+  GNT_FOOTBALL_WOMEN,
+  GNT_WATER_POLO_MEN,
+  GNT_WATER_POLO_WOMEN,
   IOANNIS_KOUNTOURAKIS,
   IOANNIS_STAMATOPOULOS,
   IOANNIS_XILAS,
@@ -37,13 +43,13 @@ export const SPORT_ICON_MAP: Record<Sport, string> = {
 };
 
 export const TEAM_IDS: Record<string, number[]> = {
-  [`${Sport.BASKETBALL}-${NationalTeam.MENS}`]: [6128],
-  [`${Sport.FOOTBALL}-${NationalTeam.MENS}`]: [4710],
-  [`${Sport.WATER_POLO}-${NationalTeam.MENS}`]: [24492],
-  [`${Sport.BASKETBALL}-${NationalTeam.WOMENS}`]: [35343],
-  [`${Sport.FOOTBALL}-${NationalTeam.WOMENS}`]: [35316],
-  [`${Sport.WATER_POLO}-${NationalTeam.WOMENS}`]: [24481],
-  [`${Sport.TENNIS}-${NationalTeam.MENS}`]: [
+  [`${Sport.BASKETBALL}-${NationalTeam.MEN}`]: [GNT_BASKETBALL_MEN],
+  [`${Sport.FOOTBALL}-${NationalTeam.MEN}`]: [GNT_FOOTBALL_MEN],
+  [`${Sport.WATER_POLO}-${NationalTeam.MEN}`]: [GNT_WATER_POLO_MEN],
+  [`${Sport.BASKETBALL}-${NationalTeam.WOMEN}`]: [GNT_BASKETBALL_WOMEN],
+  [`${Sport.FOOTBALL}-${NationalTeam.WOMEN}`]: [GNT_FOOTBALL_WOMEN],
+  [`${Sport.WATER_POLO}-${NationalTeam.WOMEN}`]: [GNT_WATER_POLO_WOMEN],
+  [`${Sport.TENNIS}-${NationalTeam.MEN}`]: [
     STEFANOS_TSITSIPAS,
     STEFANOS_SAKELLARIDIS,
     PETROS_TSITSIPAS,
@@ -63,7 +69,7 @@ export const TEAM_IDS: Record<string, number[]> = {
     IOANNIS_STAMATOPOULOS,
     CHRISTOS_GLAVAS,
   ],
-  [`${Sport.TENNIS}-${NationalTeam.WOMENS}`]: [
+  [`${Sport.TENNIS}-${NationalTeam.WOMEN}`]: [
     MARIA_SAKKARI,
     DESPINA_PAPAMICHAIL,
     VALENTINI_GRAMMATIKOPOULOU,

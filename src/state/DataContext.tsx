@@ -18,6 +18,11 @@ export const DataProvider: React.FC<React.PropsWithChildren> = ({ children }) =>
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     const teamIds = TEAM_IDS[`${sport}-${nationalTeam}`];
+    console.info({
+      teamIds,
+      sport,
+      nationalTeam,
+    });
     let timeout: NodeJS.Timeout;
 
     const fetchData = (page = 0) => {

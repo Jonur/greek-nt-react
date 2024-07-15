@@ -6,8 +6,8 @@ export enum Sport {
 }
 
 export enum NationalTeam {
-  MENS = 'MENS',
-  WOMENS = 'WOMENS',
+  MEN = 'MEN',
+  WOMEN = 'WOMEN',
 }
 
 export enum Locale {

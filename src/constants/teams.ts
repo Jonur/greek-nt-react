@@ -27,3 +27,11 @@ export const MARTHA_MATOULA = 98105;
 export const MICHAELA_LAKI = 340445;
 export const DIMITRA_PAVLOU = 317520;
 export const ELENI_CHRISTOFI = 97031;
+
+// Major Greek National Teams
+export const GNT_BASKETBALL_MEN = 6128;
+export const GNT_FOOTBALL_MEN = 4710;
+export const GNT_WATER_POLO_MEN = 24492;
+export const GNT_BASKETBALL_WOMEN = 35343;
+export const GNT_FOOTBALL_WOMEN = 35316;
+export const GNT_WATER_POLO_WOMEN = 24481;
