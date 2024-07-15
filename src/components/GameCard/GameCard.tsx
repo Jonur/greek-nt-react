@@ -24,7 +24,7 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
         <span>{game.tournament.name}</span>
 
         {game.tournament.groupName && (
-          <span className="bg-blue-20 rounded-lg px-2 py-0.5 flex items-center justify-center text-xs">
+          <span className="bg-blue-20 rounded-lg px-2 pb-0.5 flex items-center justify-center text-xs">
             {game.tournament.groupName}
           </span>
         )}

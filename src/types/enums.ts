@@ -12,6 +12,7 @@ export enum NationalTeam {
 
 export enum Locale {
   EN_GB = 'en-GB',
+  EL_GR = 'el-GR',
 }
 
 export enum FetchingStatus {
