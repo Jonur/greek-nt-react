@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { useViewCtx } from 'src/hooks';
 
 const Header: React.FC = () => {
-  const { setMenuOpen } = useViewCtx();
+  const { menuOpen, setMenuOpen } = useViewCtx();
+
+  useEffect(() => {
+    document.body.classList.toggle('no-scroll', menuOpen);
+  }, [menuOpen]);
 
   return (
     <header className="w-full flex pt-6 pb-4 px-4 gap-x-3 items-center relative">

@@ -35,7 +35,7 @@ const UserOptions: React.FC = () => {
   };
 
   return (
-    <nav className="absolute top-0 right-0 bg-blue-10 shadow-lg p-4 pt-8 w-full h-full flex flex-col">
+    <nav className="absolute max-w-[800px] mx-auto top-0 right-0 lg:right-auto bg-blue-10 shadow-lg p-4 pt-8 w-full h-full flex flex-col">
       <h1 className="font-medium">Settings</h1>
       <h2>{TRANSLATIONS.userOptionsInfo}</h2>
 
