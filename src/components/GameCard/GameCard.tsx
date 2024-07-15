@@ -3,6 +3,8 @@ import React from 'react';
 import { TeamEvent } from 'src/types';
 import { getFormattedGameDateData, getGameExternalLink, getTeamImage, getTournamentImage } from 'src/utils';
 
+import TeamDisplay from './TeamDisplay';
+
 type GameCardProps = {
   game: TeamEvent;
 };
@@ -33,30 +35,14 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
       <main className="flex gap-x-3 items-center pt-6 pb-4 border-b border-blue-20">
         <div className="flex gap-x-2 font-medium items-center">
           <img className="h-6 w-auto" src={getTeamImage(game.homeTeam)} />
-          {game.homeTeam.name.includes('/') ? (
-            <div className="flex flex-col whitespace-nowrap">
-              {game.homeTeam.name.split('/').map((team) => (
-                <span key={team}>{team.trim()}</span>
-              ))}
-            </div>
-          ) : (
-            <span>{game.homeTeam.name}</span>
-          )}
+          <TeamDisplay team={game.homeTeam} />
         </div>
 
         <span>vs</span>
 
         <div className="flex gap-x-2 font-medium items-center">
           <img className="h-6 w-auto" src={getTeamImage(game.awayTeam)} />
-          {game.awayTeam.name.includes('/') ? (
-            <div className="flex flex-col whitespace-nowrap">
-              {game.awayTeam.name.split('/').map((team) => (
-                <span key={team}>{team.trim()}</span>
-              ))}
-            </div>
-          ) : (
-            <span>{game.awayTeam.name}</span>
-          )}
+          <TeamDisplay team={game.awayTeam} />
         </div>
       </main>
 
