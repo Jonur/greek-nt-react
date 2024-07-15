@@ -11,10 +11,8 @@ import { FetchingStatus } from 'src/types';
 const App: React.FC = () => {
   const { status, teamEvents } = useDataCtx();
 
-  console.info(teamEvents);
-
   return (
-    <>
+    <div className="max-w-[800px] flex flex-col mx-auto">
       <Header />
 
       <Navigation />
@@ -24,13 +22,13 @@ const App: React.FC = () => {
       {status === FetchingStatus.FAILURE && <div className="flex px-4 py-8">{TRANSLATIONS.error}</div>}
 
       {status === FetchingStatus.SUCCESS && Boolean(teamEvents.length) && (
-        <div role="tree" className="px-4 pt-4 pb-6 flex flex-col gap-y-3">
+        <main role="tree" className="px-4 pt-4 pb-6 flex flex-col gap-y-3">
           {teamEvents.map((game) => (
             <GameCard key={game.id} game={game} />
           ))}
-        </div>
+        </main>
       )}
-    </>
+    </div>
   );
 };
 
