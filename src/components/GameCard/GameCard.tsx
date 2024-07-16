@@ -56,7 +56,7 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
 
       <footer className="pt-2 font-normal flex items-center justify-between">
         {inProgress ? (
-          <div className="flex items-center pt-0.5 gap-x-1 font-medium">
+          <div className="flex items-center pt-0.5 gap-x-1.5 font-medium">
             <span className="bg-blue-30 rounded-md flex items-center px-2 pb-[1px] h-[24px] text-blue-10">
               {TRANSLATIONS['gameCard.live']}
             </span>
