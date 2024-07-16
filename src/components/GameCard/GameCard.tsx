@@ -14,7 +14,7 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
   const { date, time } = getFormattedGameDateData(game.startTimestamp);
 
   return (
-    <div role="treeitem" className="text-sm font-medium bg-white rounded-lg p-4">
+    <div role="treeitem" className="text-sm font-medium bg-white rounded-lg p-4 pb-3">
       <header className="flex gap-x-2 items-center">
         <img
           aria-label={`${game.tournament.name} ${TRANSLATIONS['gameCard.logo']}`}
@@ -47,7 +47,7 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
         </div>
       </main>
 
-      <footer className="py-2 font-normal flex items-center justify-between">
+      <footer className="pt-2 font-normal flex items-center justify-between">
         <div className="flex items-center pt-0.5 gap-x-3">
           <span>
             <span className="font-medium">{TRANSLATIONS['gameCard.date']}:</span> {date}
