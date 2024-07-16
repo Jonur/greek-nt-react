@@ -26,3 +26,22 @@ export enum GameStatus {
   FINISHED = 'finished',
   CANCELLED = 'cancelled',
 }
+
+export enum EventType {
+  CHANGE = 'change',
+  RESIZE = 'resize',
+  LOAD = 'load',
+  MESSAGE = 'message',
+  OFFLINE = 'offline',
+  ONLINE = 'online',
+  DATA_AVAILABLE = 'dataavailable',
+  BEFORE_UNLOAD = 'beforeunload',
+  UNHANDLEDREJECTION = 'unhandledrejection',
+  ERROR = 'error',
+  SCROLL = 'scroll',
+  SCROLLEND = 'scrollend',
+}
+
+export enum Breakpoint {
+  LG = 'LG',
+}
