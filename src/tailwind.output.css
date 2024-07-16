@@ -610,6 +610,14 @@ video {
   margin-top: 40px;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-\[1px\] {
+  margin-top: 1px;
+}
+
 .flex {
   display: flex;
 }
@@ -808,6 +816,10 @@ video {
   border-radius: 0.5rem;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -828,6 +840,11 @@ video {
 
 .border-primary {
   border-color: var(--primary, #14448C);
+}
+
+.border-blue-30 {
+  --tw-border-opacity: 1;
+  border-color: rgb(20 68 140 / var(--tw-border-opacity));
 }
 
 .bg-blue-10 {

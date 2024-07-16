@@ -1,7 +1,8 @@
+import c from 'classnames';
 import React from 'react';
 
 import { TRANSLATIONS } from 'src/constants';
-import { TeamEvent } from 'src/types';
+import { GameStatus, TeamEvent } from 'src/types';
 import { getFormattedGameDateData, getGameExternalLink, getTeamImage, getTournamentImage } from 'src/utils';
 
 import TeamDisplay from './TeamDisplay';
@@ -12,9 +13,15 @@ type GameCardProps = {
 
 const GameCard: React.FC<GameCardProps> = ({ game }) => {
   const { date, time } = getFormattedGameDateData(game.startTimestamp);
+  const inProgress = game.status.type === GameStatus.IN_PROGRESS;
 
   return (
-    <div role="treeitem" className="text-sm font-medium bg-white rounded-lg p-4 pb-3">
+    <div
+      role="treeitem"
+      className={c('text-sm font-medium bg-white rounded-lg p-4 pb-3', {
+        'border border-blue-30': inProgress,
+      })}
+    >
       <header className="flex gap-x-2 items-center">
         <img
           aria-label={`${game.tournament.name} ${TRANSLATIONS['gameCard.logo']}`}
@@ -48,23 +55,40 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
       </main>
 
       <footer className="pt-2 font-normal flex items-center justify-between">
-        <div className="flex items-center pt-0.5 gap-x-3">
-          <span>
-            <span className="font-medium">{TRANSLATIONS['gameCard.date']}:</span> {date}
-          </span>
-          <span>
-            <span className="font-medium">{TRANSLATIONS['gameCard.time']}:</span> {time} BST
-          </span>
-        </div>
+        {inProgress ? (
+          <div className="flex items-center pt-0.5 gap-x-1 font-medium">
+            {TRANSLATIONS['gameCard.live']}
+            <a
+              aria-label={TRANSLATIONS['gameCard.gameDetails']}
+              href={getGameExternalLink(game)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-b border-blue-30 mt-[1px] text-primary"
+            >
+              {TRANSLATIONS['gameCard.live.link']}
+            </a>
+          </div>
+        ) : (
+          <div className="flex items-center pt-0.5 gap-x-3">
+            <span>
+              <span className="font-medium">{TRANSLATIONS['gameCard.date']}:</span> {date}
+            </span>
+            <span>
+              <span className="font-medium">{TRANSLATIONS['gameCard.time']}:</span> {time} BST
+            </span>
+          </div>
+        )}
 
-        <a
-          aria-label={TRANSLATIONS['gameCard.gameDetails']}
-          href={getGameExternalLink(game)}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img className="h-6 w-auto" src="img/link.svg" />
-        </a>
+        {!inProgress && (
+          <a
+            aria-label={TRANSLATIONS['gameCard.gameDetails']}
+            href={getGameExternalLink(game)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className="h-6 w-auto" src="img/link.svg" />
+          </a>
+        )}
       </footer>
     </div>
   );

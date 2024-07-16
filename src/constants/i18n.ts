@@ -20,6 +20,8 @@ export const TRANSLATIONS: Record<string, string> = {
   'gameCard.logo': 'logo',
   'gameCard.gameDetails': 'Game details',
   'app.title': 'Greek national teams’ games',
+  'gameCard.live': 'Live now!',
+  'gameCard.live.link': 'Follow game updates on Sofascore',
   3508: 'Panathinaikos',
   3501: 'Olympiacos',
   3503: 'Peristeri',

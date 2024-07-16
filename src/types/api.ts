@@ -1,3 +1,5 @@
+import { GameStatus } from './enums';
+
 type Sport = {
   name: string;
   slug: string;
@@ -60,7 +62,7 @@ type RoundInfo = {
 type Status = {
   code: number;
   description: string;
-  type: string;
+  type: GameStatus;
 };
 
 type TeamColors = {
@@ -132,4 +134,9 @@ export type ApiTeamEvent = {
 export type ApiTeamData = {
   events: ApiTeamEvent[];
   hasNextPage: boolean;
+};
+
+export type ApiNearEventsData = {
+  previousEvent: ApiTeamEvent;
+  nextEvent: ApiTeamEvent;
 };

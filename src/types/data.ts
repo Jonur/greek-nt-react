@@ -1,3 +1,5 @@
+import { GameStatus } from './enums';
+
 export type Team = {
   id: number;
   name: string;
@@ -24,7 +26,7 @@ export type TeamEvent = {
   status: {
     code: number;
     description: string;
-    type: string;
+    type: GameStatus;
   };
   tournament: Tournament;
   awayTeam: Team;

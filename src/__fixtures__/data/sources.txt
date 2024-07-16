@@ -10,6 +10,9 @@ https://www.sofascore.com/tournament/basketball/international/olympic-games/276
 Tournament image example
 https://api.sofascore.app/api/v1/unique-tournament/276/image/dark
 
+Near events
+https://www.sofascore.com/api/v1/team/6128/near-events
+
 IDs:
 Mens Basketball: 6128
 Womens basketball: 35343

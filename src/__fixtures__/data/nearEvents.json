@@ -1,0 +1,220 @@
+{
+  "previousEvent": {
+    "tournament": {
+      "name": "International Friendly Games",
+      "slug": "international-friendly-games",
+      "category": {
+        "name": "International",
+        "slug": "international",
+        "sport": { "name": "Basketball", "slug": "basketball", "id": 2 },
+        "id": 103,
+        "flag": "international"
+      },
+      "uniqueTournament": {
+        "name": "Int. Friendly Games",
+        "slug": "int-friendly-games",
+        "primaryColorHex": "#151922",
+        "secondaryColorHex": "#ea181f",
+        "category": {
+          "name": "International",
+          "slug": "international",
+          "sport": { "name": "Basketball", "slug": "basketball", "id": 2 },
+          "id": 103,
+          "flag": "international"
+        },
+        "userCount": 3972,
+        "id": 871,
+        "crowdsourcingEnabled": false,
+        "hasPerformanceGraphFeature": false,
+        "hasEventPlayerStatistics": false,
+        "displayInverseHomeAwayTeams": false
+      },
+      "priority": 0,
+      "isGroup": false,
+      "isLive": false,
+      "id": 2238
+    },
+    "season": { "name": "Int. Friendly Games 2024", "year": "2024", "editor": false, "id": 57188 },
+    "roundInfo": { "round": 1 },
+    "customId": "DxcsLxc",
+    "status": { "code": 15, "description": "3rd quarter", "type": "inprogress" },
+    "homeTeam": {
+      "name": "Greece",
+      "slug": "greece",
+      "shortName": "Greece",
+      "gender": "M",
+      "sport": { "name": "Basketball", "slug": "basketball", "id": 2 },
+      "userCount": 44055,
+      "nameCode": "GRC",
+      "disabled": false,
+      "national": true,
+      "type": 0,
+      "id": 6128,
+      "subTeams": [],
+      "teamColors": { "primary": "#ffffff", "secondary": "#005bae", "text": "#005bae" },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u0627\u0644\u064a\u0648\u0646\u0627\u0646",
+          "ru": "\u0413\u0440\u0435\u0446\u0438\u044f"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "awayTeam": {
+      "name": "Puerto Rico",
+      "slug": "puerto-rico",
+      "shortName": "Puerto Rico",
+      "gender": "M",
+      "sport": { "name": "Basketball", "slug": "basketball", "id": 2 },
+      "userCount": 1361,
+      "nameCode": "PRI",
+      "disabled": false,
+      "national": true,
+      "type": 0,
+      "id": 6136,
+      "subTeams": [],
+      "teamColors": { "primary": "#ff0000", "secondary": "#0920f0", "text": "#0920f0" },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u0628\u0648\u0631\u062a\u0648 \u0631\u064a\u0643\u0648",
+          "ru": "\u041f\u0443\u044d\u0440\u0442\u043e-\u0420\u0438\u043a\u043e"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "homeScore": { "current": 48, "display": 48, "period1": 15, "period2": 17, "period3": 16 },
+    "awayScore": { "current": 55, "display": 55, "period1": 20, "period2": 16, "period3": 19 },
+    "time": {
+      "played": 1720,
+      "periodLength": 600,
+      "overtimeLength": 300,
+      "totalPeriodCount": 4,
+      "currentPeriodStartTimestamp": 1721147406
+    },
+    "changes": {
+      "changes": ["awayScore.current", "awayScore.display", "awayScore.period3", "time.played"],
+      "changeTimestamp": 1721148387
+    },
+    "hasGlobalHighlights": false,
+    "crowdsourcingDataDisplayEnabled": false,
+    "id": 12541298,
+    "periods": {
+      "current": "Score",
+      "period1": "1st quarter",
+      "period2": "2nd quarter",
+      "period3": "3rd quarter",
+      "period4": "4th quarter",
+      "overtime": "Overtime"
+    },
+    "startTimestamp": 1721143800,
+    "slug": "puerto-rico-greece",
+    "lastPeriod": "period3",
+    "finalResultOnly": false,
+    "feedLocked": false,
+    "isEditor": false,
+    "crowdsourcingEnabled": false
+  },
+  "nextEvent": {
+    "tournament": {
+      "name": "Olympic Tournament, Group A",
+      "slug": "olympic-tournament-group-a",
+      "category": {
+        "name": "International",
+        "slug": "international",
+        "sport": { "name": "Basketball", "slug": "basketball", "id": 2 },
+        "id": 103,
+        "flag": "international"
+      },
+      "uniqueTournament": {
+        "name": "Olympic Games",
+        "slug": "olympic-games",
+        "primaryColorHex": "#8b2130",
+        "secondaryColorHex": "#b11d33",
+        "category": {
+          "name": "International",
+          "slug": "international",
+          "sport": { "name": "Basketball", "slug": "basketball", "id": 2 },
+          "id": 103,
+          "flag": "international"
+        },
+        "userCount": 28728,
+        "id": 276,
+        "crowdsourcingEnabled": false,
+        "hasPerformanceGraphFeature": false,
+        "hasEventPlayerStatistics": false,
+        "displayInverseHomeAwayTeams": false
+      },
+      "priority": 179,
+      "isGroup": true,
+      "groupName": "Group A",
+      "isLive": false,
+      "id": 2358
+    },
+    "season": { "name": "Olympic Games 2024", "year": "2024", "editor": false, "id": 59240 },
+    "roundInfo": { "round": 1 },
+    "customId": "DxcsFXi",
+    "status": { "code": 0, "description": "Not started", "type": "notstarted" },
+    "homeTeam": {
+      "name": "Greece",
+      "slug": "greece",
+      "shortName": "Greece",
+      "gender": "M",
+      "sport": { "name": "Basketball", "slug": "basketball", "id": 2 },
+      "userCount": 44055,
+      "nameCode": "GRC",
+      "disabled": false,
+      "national": true,
+      "type": 0,
+      "id": 6128,
+      "subTeams": [],
+      "teamColors": { "primary": "#ffffff", "secondary": "#005bae", "text": "#005bae" },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u0627\u0644\u064a\u0648\u0646\u0627\u0646",
+          "ru": "\u0413\u0440\u0435\u0446\u0438\u044f"
+        },
+        "shortNameTranslation": {}
+      }
+    },
+    "awayTeam": {
+      "name": "Canada",
+      "slug": "canada",
+      "shortName": "Canada",
+      "gender": "M",
+      "sport": { "name": "Basketball", "slug": "basketball", "id": 2 },
+      "userCount": 6211,
+      "nameCode": "CAN",
+      "disabled": false,
+      "national": true,
+      "type": 0,
+      "id": 22380,
+      "subTeams": [],
+      "teamColors": { "primary": "#ff0000", "secondary": "#ffffff", "text": "#ffffff" },
+      "fieldTranslations": {
+        "nameTranslation": { "ar": "\u0643\u0646\u062f\u0627", "ru": "\u041a\u0430\u043d\u0430\u0434\u0430" },
+        "shortNameTranslation": {}
+      }
+    },
+    "homeScore": {},
+    "awayScore": {},
+    "time": {},
+    "changes": { "changeTimestamp": 0 },
+    "hasGlobalHighlights": false,
+    "crowdsourcingDataDisplayEnabled": false,
+    "id": 12178880,
+    "periods": {
+      "current": "Score",
+      "period1": "1st quarter",
+      "period2": "2nd quarter",
+      "period3": "3rd quarter",
+      "period4": "4th quarter",
+      "overtime": "Overtime"
+    },
+    "startTimestamp": 1722106800,
+    "slug": "canada-greece",
+    "finalResultOnly": false,
+    "feedLocked": false,
+    "isEditor": false,
+    "crowdsourcingEnabled": false
+  }
+}

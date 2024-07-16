@@ -5,3 +5,4 @@ export { default as getTeamImage } from './getTeamImage';
 export { default as getGameExternalLink } from './getGameExternalLink';
 export { default as getLSItem } from './getLSItem';
 export { default as getUserClubOptions } from './getUserClubOptions';
+export { default as getTeamNearEvents } from './getTeamNearEvents';

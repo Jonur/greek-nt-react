@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, { createContext, useEffect, useState } from 'react';
 
-import { FETCHING_DELAY_EFFECT_MS, GAME_STATUS_CODES, TEAM_IDS } from 'src/constants';
+import { FETCHING_DELAY_EFFECT_MS, TEAM_IDS } from 'src/constants';
 import { useViewCtx } from 'src/hooks';
-import { ApiTeamData, DataContext, FetchingStatus, GameStatus, TeamEvent } from 'src/types';
-import { games, getTeamEvents, getUserClubOptions } from 'src/utils';
+import { ApiNearEventsData, ApiTeamData, DataContext, FetchingStatus, GameStatus, TeamEvent } from 'src/types';
+import { games, getTeamEvents, getTeamNearEvents, getUserClubOptions } from 'src/utils';
 
 // eslint-disable-next-line no-type-assertion/no-type-assertion
 export const DataCtx = createContext<DataContext>({} as DataContext);
@@ -26,21 +26,43 @@ export const DataProvider: React.FC<React.PropsWithChildren> = ({ children }) =>
 
       timeout = setTimeout(async () => {
         const allResults = await Promise.allSettled(teamIds.map((teamId) => axios.get(getTeamEvents(teamId, page))));
+        const allNearEventsResults = await Promise.allSettled(
+          teamIds.map((teamId) => axios.get(getTeamNearEvents(teamId)))
+        );
         const fulfilledResults = allResults.filter((r) => r.status === 'fulfilled');
+        const fulfilledNearResults = allNearEventsResults.filter((r) => r.status === 'fulfilled');
         let hasNextPage = false;
 
-        if (fulfilledResults.length > 0) {
+        if (fulfilledResults.length > 0 || fulfilledNearResults.length > 0) {
           fulfilledResults.forEach((result) => {
             const response = result.value;
             const newData: ApiTeamData = response.data;
             hasNextPage = newData.hasNextPage;
 
-            const futureEvents = games(newData).filter(
-              (event) => event.status.code === GAME_STATUS_CODES[GameStatus.NOT_STARTED]
+            const futureEvents = games(newData).filter((event) =>
+              [GameStatus.IN_PROGRESS, GameStatus.NOT_STARTED].includes(event.status.type)
             );
             setTeamEvents((prevEvents) => [
               ...prevEvents,
               ...futureEvents.filter((event) => !prevEvents.find((e) => e.id === event.id)),
+            ]);
+          });
+
+          fulfilledNearResults.forEach((result) => {
+            const response = result.value;
+            const newData: ApiNearEventsData = response.data;
+
+            const nearEventsData: ApiTeamData = {
+              events: [newData.nextEvent, newData.previousEvent],
+              hasNextPage: false,
+            };
+            const nearEvents = games(nearEventsData).filter((event) =>
+              [GameStatus.IN_PROGRESS, GameStatus.NOT_STARTED].includes(event.status.type)
+            );
+
+            setTeamEvents((prevEvents) => [
+              ...prevEvents,
+              ...nearEvents.filter((event) => !prevEvents.find((e) => e.id === event.id)),
             ]);
           });
 

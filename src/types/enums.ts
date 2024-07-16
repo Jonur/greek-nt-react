@@ -25,6 +25,7 @@ export enum GameStatus {
   NOT_STARTED = 'notstarted',
   FINISHED = 'finished',
   CANCELLED = 'cancelled',
+  IN_PROGRESS = 'inprogress',
 }
 
 export enum EventType {
