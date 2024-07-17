@@ -76,7 +76,7 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
               <span className="font-medium">{TRANSLATIONS['gameCard.date']}:</span> {date}
             </span>
             <span>
-              <span className="font-medium">{TRANSLATIONS['gameCard.time']}:</span> {time} BST
+              <span className="font-medium">{TRANSLATIONS['gameCard.time']}:</span> {time}
             </span>
           </div>
         )}
