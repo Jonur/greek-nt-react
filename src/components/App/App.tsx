@@ -27,13 +27,17 @@ const App: React.FC = () => {
 
       {status === FetchingStatus.FAILURE && <div className="flex px-4 py-8">{TRANSLATIONS.error}</div>}
 
-      {status === FetchingStatus.SUCCESS && Boolean(teamEvents.length) && (
-        <main role="tree" className="px-4 pt-4 pb-6 flex flex-col gap-y-3">
-          {teamEvents.map((game) => (
-            <GameCard key={game.id} game={game} />
-          ))}
-        </main>
-      )}
+      <main role="tree" className="px-4 pt-4 pb-6 flex flex-col gap-y-3">
+        {status === FetchingStatus.SUCCESS && Boolean(teamEvents.length) ? (
+          <>
+            {teamEvents.map((game) => (
+              <GameCard key={game.id} game={game} />
+            ))}
+          </>
+        ) : (
+          <div className="flex px-4 py-8">{TRANSLATIONS.error}</div>
+        )}
+      </main>
 
       <Footer />
     </div>
