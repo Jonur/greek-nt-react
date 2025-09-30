@@ -39,6 +39,8 @@ export const DataProvider: React.FC<React.PropsWithChildren> = ({ children }) =>
             const newData: ApiTeamData = response.data;
             hasNextPage = newData.hasNextPage;
 
+            console.info({ newData });
+
             const futureEvents = games(newData).filter((event) =>
               [GameStatus.IN_PROGRESS, GameStatus.NOT_STARTED].includes(event.status.type)
             );
